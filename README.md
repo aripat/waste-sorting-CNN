@@ -1,0 +1,10 @@
+# Waste sorting with (Artificial) Intelligence
+
+Here I will keep track of progresses in this project in which I'm trying to model a CNN capable of distinguish different categories of wastes from images and photos taken in different contexts and with various backgrounds. 
+
+Efficient waste management is a core element for the well-being of citizens, urban areas and for the health of human operators in landfills and facilities. Data scientists have proposed different machine learning approaches, like automated waste recognition systems with Convolutional neural networks, also embedded with sensors in some experiments. In this thesis I tackled the problem of automated waste sorting, trying to understand if this systems could be used in households or as support for street cleaning operators other than in specialized facilities. I analyzed some related works and then I tried to build two models using datasets and ideas from the cited articles, along with my own contribution. Model A is sequential, with a relatively simple structure and has reached about 75% in categorical accuracy, precision and recall. With model B I obtained the best results, using as basis the Inception-ResNetV2 model with Transfer Learning technique. It can distinguish seven waste categories (compost, cardboard, paper, glass, plastic, metal and trash) with both precision and recall above 85%. Despite these good results, I wanted to try model B on a test set built by me, which contained photos with various backgrounds. Average recall and precision did not exceed 40%, and for the trash category not even 15%, so this model seems not suitable for the realistic contexts mentioned above. The cause of this performance collapse is most likely due to the fact that datasets used for training are not structured enough. Also, it would be useful to expand the classification with more classes, like in example sub-classes of the ones taken in exam.
+
+# Little bit of backstory 
+
+I started this project for my bachelor's degree thesis in September 2020 and I'm still working on it to obtain better results.  
+Let's get rid of all that trash, or better, let's recycle! 
