@@ -1,0 +1,61 @@
+COME LEGGERE I NOMI DEI FILE::
+
+DATASET::::
+
+(ds, split o test)_(Immagini)_(Numero classi)
+
+ds_** : cartelle dei dataset destinati al train/val/test o solo train/val, categorie
+split_**: dataset già splittati in train/val/test, ognuno diviso nelle categorie
+png_**: immagini cleaned senza background, divisi nelle categorie
+test_**: testset diviso in categorie
+
+Immagini::
+- "clean": contengono le immagini della size adatta ai modelli, divise per categorie
+- "realistic": creato da me
+- "newBG": con background aumentato
+- "C+BG": clean + newBG
+
+Numero classi::
+-"6": 6 categorie (cardboard, glass, paper, metal, plastic, trash), usato nel modello A
+-"7": 7 categorie (stesse + compost)
+
+
+MODELS::::
+model_(Modello)_(Training set usato).h5
+
+Modello::
+A: modello basato su AlexNet (6 classi)
+B: modello basato su Inception ResNet v4 (7 classi)
+
+Training set usato::
+C: cleaned, training fatto su immagini con sfondo neutro
+BG: background augmented, training fatto su immagini prese dal cleaned con sfondi aumentati
+C+BG: entrambi
+
+REPORTS:::: (e test)
+
+report_(modello A o B)_(Test)
+
+Test::
+Test1: su modello C, testet cleaned
+
+Test2: su modello C, testet realistico
+
+(!!!Attenzione a prendere lo split corretto, il modello non deve aver mai visto le immagini di test!!!)
+Test3: su modello C, teset cleaned con background aumentato
+
+Test4: su modello BG, testset cleaned
+
+Test5: su modello BG, testset realistico
+
+Test6: su modello BG+C, testset cleaned
+
+Test7: su modello BG+C, testset realistico
+
+
+
+
+
+
+
+
